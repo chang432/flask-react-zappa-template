@@ -10,4 +10,7 @@
 3. Prepare AWS credentials locally: 
 - Run 'aws configure' and input your public and secret access key (Retreive from aws console)
 - Make sure that profile is set as default: 'export AWS_PROFILE={PROFILE_NAME}'
-4. Init zappa project: 'zappa init'
+7. In zappa_settings.json, replace {PROJECT_NAME} and {AWS_PROFILE_NAME} with the correct values
+5. Cd into frontend/ and then run 'npm i'
+6. Run 'npm run dev' and make sure the website is reachable
+7. Go back to the root of the project and run 'zappa deploy dev'
