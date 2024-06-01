@@ -14,8 +14,7 @@
 5. Cd into frontend/ and then run 'npm ci'
 6. Run 'npm run dev' and make sure the website is reachable
 7. Go back to the root of the project and run 'bash local_deploy.sh' to test if the flask application is working
-8. Initialize the zappa dev application with 'zappa deploy dev'
-9. On the aws console, edit the newly created s3 bucket in the following ways:
+8. On the aws console, edit the newly created s3 bucket in the following ways:
 - Set block all public access to OFF
 - Set object ownership to ACLs enabled and bucket owner preferred
 - In the ACL view, edit and check List to the right of 'Everyone (public access)'
@@ -35,4 +34,6 @@
         "ExposeHeaders": []
     }
 ]
-10. Then in deploy_dev.sh and scripts/upload_static.py, replace {BUCKET_NAME} with the dev bucket name. Then run 'bash deploy_dev.sh'
+9. Initialize the zappa dev application with 'zappa deploy dev'
+10. Then in deploy_dev.sh and scripts/upload_static.py, replace {BUCKET_NAME} and {ENDPOINT} with the dev bucket and endpoint name. Then run 'bash deploy_dev.sh'
+11. When you're ready, do steps 9+10 again but replace dev with prod.
